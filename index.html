@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sing up!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>Sing<span>up</span></h1>
+        <div class="form_box">
+            <input type="text" id="username" placeholder="Username">
+            <p class="error_text"></p>
+        </div>
+        <div class="form_box">
+            <input type="password" id="password" placeholder="Password">
+            <p class="error_text"></p>
+        </div>
+        <div class="form_box">
+            <input type="password" placeholder="Repeat password">
+            <p class="error_text"></p>
+        </div>
+        <div class="form_box">
+            <input type="email" placeholder="Enter your email">
+            <p class="error_text"></p>
+        </div>
+        <div class="control_btn">
+            <button class="clear">Clear</button>
+            <button class="send">Send</button>
+        </div>
+        <div class="popup">
+            <p>Your form was send sucessfull.</p>
+            <button class="close">Close</button>
+        </div>
+    </div>
+
+    <script src="/main.js"></script>
+</body>
+
+</html>

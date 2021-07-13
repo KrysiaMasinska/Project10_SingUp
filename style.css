@@ -14,6 +14,7 @@ body {
     align-items: center;
     min-height: 100vh;
     font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
     background-image: linear-gradient(rgba(0, 0, 0, .55), rgba(0, 0, 0, .55)), url('../img/beach-1236581_1920.jpg');
     background-position: center;
     background-size: cover;
@@ -26,7 +27,7 @@ body {
     margin: 6px auto;
     background: rgb(238, 232, 232);
     border-radius: 8px;
-    box-shadow: 0 0 10px rgb(92, 211, 81);
+    box-shadow: 0 0 10px 2px rgb(92, 211, 81);
 }
 
 h1 {
@@ -42,19 +43,31 @@ h1 span {
 }
 
 .form_box {
-    margin: 30px;
+    margin: 20px 30px;
 }
 
 .form_box input {
     width: 100%;
-    padding: 8px 16px;
+    padding: 8px 10px;
     font-size: 1.8rem;
-    color: rgb(92, 211, 81);
-    border: none;
+    color: rgb(0, 0, 0);
     background: rgb(238, 232, 232);
-    ;
+    border: none;
     border-bottom: 2px solid rgb(85, 84, 84);
 }
+
+.form_box .error{
+    background-color: rgb(92, 211, 81);
+    border: 2px solid rgb(0, 0, 0);
+}
+
+.error_text {
+    margin-top: 10px;
+    font-size: 1.6rem;
+    color: rgb(92, 211, 81);
+    visibility: hidden;
+}
+
 
 .control_btn {
     display: flex;
@@ -68,4 +81,43 @@ h1 span {
 .close {
     padding: 10px 20px;
     font-size: 1.6rem;
+    border: 1px solid rgb(85, 84, 84);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color .3s;
+}
+
+.clear:hover,
+.send:hover,
+.close:hover {
+    background-color: rgb(92, 211, 81);
+}
+
+.popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: -300px;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 180px;
+    background-color: rgb(238, 232, 232);
+    border-radius: 8px;
+    box-shadow: 0 0 10px 2px rgb(92, 211, 81);
+    transition: top .5s;
+}
+
+.popup p{
+    font-size: 2.3rem;
+}
+
+.popup .close{
+    margin-top:20px;
+}
+
+.popup-show{
+    top: 150px;
 }

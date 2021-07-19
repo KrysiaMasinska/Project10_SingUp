@@ -8,6 +8,18 @@ const popup = document.querySelector('.popup');
 
 const inputArray = [username, password, password2, mail];
 
+const checkPassword = (pass1, pass2) => {
+    if(pass1.value !== pass2.value){
+        showError(pass2, 'Passwords are different.');
+    }
+};
+
+const checkLength = (input, minValue) => {
+    if (input.value.length < minValue) {
+        showError(input, `${input.placeholder} consist min ${minValue} character`)
+    }
+};
+
 const showError = (input, msg) => {
     const formBox = input.parentElement;
     const errorMsg = formBox.querySelector('.error_text');
@@ -33,6 +45,9 @@ const checkForm = input => {
 sendBtn.addEventListener('click', e => {
     e.preventDefault();
     checkForm(inputArray);
+    checkLength(username, 3);
+    checkLength(password, 8);
+    checkPassword(password, password2);
 });
 
 clearBtn.addEventListener('click', e => {

@@ -85,6 +85,7 @@ clearBtn.addEventListener('click', e => {
     });
 });
 
-closeBtn.addEventListener('click', () => {
+closeBtn.addEventListener('click', e => {
+    e.preventDefault();
     popup.classList.remove('popup-show');
-})
+});
